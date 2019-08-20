@@ -1,11 +1,9 @@
 import * as fs from 'fs'
-import * as path from 'path'
 import Debug from 'debug'
 import { Config, Callbacks } from '../all.interface'
+import { targetFile } from '../config'
 
 const debug = Debug('[update file]')
-
-const targetFile = path.resolve('/', 'App', 'ss', 'gui-config.json')
 
 export default function updateTmp(
   theConfig: Config,

@@ -1,6 +1,5 @@
 import 'cross-fetch/polyfill'
 import * as ws from 'ws'
-
 import { ApolloClient } from 'apollo-client'
 import { split } from 'apollo-link'
 import { HttpLink } from 'apollo-link-http'
@@ -8,14 +7,14 @@ import { WebSocketLink } from 'apollo-link-ws'
 import { getMainDefinition } from 'apollo-utilities'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
-const API_URL = 'https://boat.songlairui.cn/graphql'
+import { API_URL, WSS_URL } from './config'
 
 const httpLink = new HttpLink({
   uri: API_URL,
 })
 
 const wsLink = new WebSocketLink({
-  uri: `wss://boat.songlairui.cn/subscriptions`,
+  uri: WSS_URL,
   options: {
     reconnect: true,
   },

@@ -1,0 +1,45 @@
+{
+  "name": "monitor-ss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "build": "rimraf lib && tsc --outDir=lib src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@types/node-notifier": "^5.4.0",
+    "apollo-boost": "^0.4.4",
+    "apollo-link-ws": "^1.0.18",
+    "cross-fetch": "^3.0.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
+    "graphql": "^14.4.2",
+    "node-fetch": "^2.6.0",
+    "node-notifier": "^5.4.3",
+    "subscriptions-transport-ws": "^0.9.16",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/graphql": "^14.0.3",
+    "@types/lodash": "^4.14.119",
+    "@types/node-fetch": "^2.5.0",
+    "@types/ws": "^6.0.2",
+    "husky": "^3.0.4",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "~3.5.3"
+  }
+}

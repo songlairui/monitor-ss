@@ -1,0 +1,12 @@
+{
+  "include": ["src/**/*.ts", "src/**/*.tsx", "typings/**/*.ts"],
+  "compilerOptions": {
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es2015", "esnext.asynciterable"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}

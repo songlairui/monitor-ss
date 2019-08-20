@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "cross-env DEBUG=* node ./lib",
     "tsc": "tsc",
-    "build": "rimraf lib && tsc --outDir=lib src/index.ts",
+    "build:typings": "tsc -p tsconfig.typings.json",
+    "build": "rimraf lib && tsc && npm run build:typings",
     "predev": "tsc",
-    "start": "node ./lib",
-    "build:typings": "tsc -p tsconfig.typings.json"
+    "start": "node ./lib"
   },
   "main": "lib/index.js",
   "keywords": [],

@@ -1,12 +1,11 @@
-import fs from 'fs'
-import path from 'path'
+import * as fs from 'fs'
+import * as path from 'path'
 import Debug from 'debug'
-import { Config, Callbacks } from '../all.interface';
+import { Config, Callbacks } from '../all.interface'
 
 const debug = Debug('[update file]')
 
 const targetFile = path.resolve('/', 'App', 'ss', 'gui-config.json')
-
 
 export default function updateTmp(
   theConfig: Config,
@@ -42,12 +41,14 @@ export default function updateTmp(
       })
     }
     fs.writeFileSync(targetFile, JSON.stringify(originRaw, null, 2))
+    debug('√')
     callbacks.success
       ? callbacks.success()
       : console.warn('Update Config Success')
   } catch (error) {
+    debug('×')
     callbacks.fail
-      ? callbacks.fail()
+      ? callbacks.fail(error)
       : console.warn('Update Config fail', error)
   }
 }

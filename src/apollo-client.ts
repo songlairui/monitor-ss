@@ -1,5 +1,5 @@
 import 'cross-fetch/polyfill'
-import ws from 'ws'
+import * as ws from 'ws'
 
 import { ApolloClient } from 'apollo-client'
 import { split } from 'apollo-link'

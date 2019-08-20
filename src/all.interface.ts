@@ -12,5 +12,5 @@ export interface Config {
 
 export interface Callbacks {
   success?(): void
-  fail?(): void
+  fail?(err: any): void
 }
